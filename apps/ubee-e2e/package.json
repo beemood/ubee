@@ -1,0 +1,26 @@
+{
+  "name": "@ubee/ubee-e2e",
+  "version": "0.0.1",
+  "private": true,
+  "nx": {
+    "implicitDependencies": [
+      "@ubee/ubee"
+    ],
+    "targets": {
+      "e2e": {
+        "executor": "@nx/jest:jest",
+        "outputs": [
+          "{projectRoot}/test-output/jest/coverage"
+        ],
+        "options": {
+          "jestConfig": "apps/ubee-e2e/jest.config.ts",
+          "passWithNoTests": true
+        },
+        "dependsOn": [
+          "@ubee/ubee:build",
+          "@ubee/ubee:serve"
+        ]
+      }
+    }
+  }
+}
