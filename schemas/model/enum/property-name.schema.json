@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft-04/schema#",
+  "title": "Property Name",
+  "enum": [
+    "id",
+    "createdAt",
+    "updatedAt",
+    "deletedAt",
+    "active",
+    "status",
+    "firstName",
+    "lastName",
+    "middleName",
+    "gender",
+    "username",
+    "password",
+    "name",
+    "description",
+    "quantity",
+    "price",
+    "discount",
+    "city",
+    "state",
+    "street",
+    "country",
+    "zip",
+    "postalCode",
+    "phone",
+    "email",
+    "website",
+
+    "linkedin",
+    "instagram",
+    "facebook",
+    "github",
+    "twitter"
+  ]
+}

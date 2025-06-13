@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "title": "Property",
+  "allOf": [{ "$ref": "#/definitions/Common" }],
+  "definitions": {
+    "Common": {
+      "properties": {
+        "name": {
+          "$ref": "../enum/property-name.schema.json"
+        },
+        "type": {
+          "$ref": "../enum/property-type.schema.json"
+        }
+      }
+    }
+  }
+}
