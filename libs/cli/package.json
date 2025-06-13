@@ -5,6 +5,9 @@
   "main": "./dist/index.esm.js",
   "module": "./dist/index.esm.js",
   "types": "./dist/index.d.ts",
+  "bin": {
+    "ubee": "./bin/ubee.js"
+  },
   "exports": {
     "./package.json": "./package.json",
     ".": {
@@ -17,9 +20,11 @@
   },
   "files": [
     "dist",
+    "bin",
     "!**/*.tsbuildinfo"
   ],
   "dependencies": {
+    "commander": "^14.0.0",
     "tslib": "^2.3.0"
   }
 }
