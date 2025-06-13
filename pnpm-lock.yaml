@@ -113,6 +113,8 @@ importers:
 
   apps/ubee-e2e: {}
 
+  libs/cli: {}
+
   libs/sample-library: {}
 
 packages:
