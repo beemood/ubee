@@ -1,0 +1,17 @@
+{
+  "test command": {
+    "prefix": "test command",
+    "body": [
+      "import { $1Action } from './$1.action.js';",
+      "",
+      "describe('$1', () => {",
+      "  it('should run with the provided parameters', () => {",
+      "    const consoleLog = vi.spyOn(console, 'log');",
+      "    $1Action({ name: 'Some', template: 'How you doing, \\$name' });",
+      "    expect(consoleLog).toHaveBeenCalledExactlyOnceWith('How you doing, Some');",
+      "  });",
+      "});"
+    ],
+    "scope": "typescript"
+  }
+}

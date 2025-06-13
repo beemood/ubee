@@ -1,0 +1,49 @@
+{
+  "name": "<%- projectName %>",
+  "description":"- [ ] add description",
+  "version": "<%- pg.version %>",
+  "license": "<%- pg.license %>",
+  "author": <%- JSON.stringify(pg.author) %>,
+  "keywords":<%- JSON.stringify(pg.keywords) %>,
+  "repository": {
+    "directory": "<%- directory %>",
+    "url": "<%- pg.repository.url %>",
+    "type": "<%- pg.repository.type %>"
+  },
+  "homepage": "<%- pg.homepage %>/<%- fileName %>",
+  "funding": <%- JSON.stringify(pg.funding) %>,
+  "icon": "<%- pg.content %>/<%- directory %>/favicon.png",
+  "publishConfig": {
+    "access": "public",
+    "tag": "latest"
+  },
+  "type": "module",
+  "main": "./dist/index.esm.js",
+  "module": "./dist/index.esm.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "development": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.esm.js",
+      "default": "./dist/index.esm.js",
+      "require": "./dist/index.cjs.js"
+    }
+  },
+  "files": [
+    "dist",
+    "!**/*.tsbuildinfo"
+  ],
+  "nx": {
+    "targets": {
+      "doc": {
+        "executor": "nx:run-commands",
+        "options": {
+          "command": "npx typedoc --tsconfig {projectRoot}/tsconfig.lib.json --entryPoints {projectRoot}/src/index.ts --out public/{projectName}",
+          "cwd": "{workspaceRoot}"
+        }
+      }
+    }
+  }
+}

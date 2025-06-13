@@ -1,0 +1,14 @@
+{
+  "generators": {
+    "hello": {
+      "factory": "./dist/hello/hello",
+      "schema": "./dist/hello/schema.json",
+      "description": "hello generator"
+    },
+    "project": {
+      "factory": "./dist/project/project",
+      "schema": "./dist/project/schema.json",
+      "description": "project generator"
+    }
+  }
+}

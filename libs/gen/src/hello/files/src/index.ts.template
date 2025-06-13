@@ -1,0 +1,2 @@
+const variable = "<%= name %>";
+console.log(variable);

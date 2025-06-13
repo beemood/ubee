@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/schema",
+  "$id": "Project",
+  "title": "",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      },
+      "x-prompt": "What project name would you like to use?"
+    },
+    "type": {
+      "type": "string",
+      "description": "what project type would you like to use?",
+      "enum": ["lib", "cli", "gen", "api"],
+      "$default": {
+        "$source": "argv",
+        "index": 1
+      },
+      "x-prompt": "What type would you like to use?"
+    }
+  },
+  "required": ["name"]
+}

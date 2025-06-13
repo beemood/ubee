@@ -2,9 +2,27 @@
   "name": "@ubee/source",
   "version": "0.0.0",
   "license": "MIT",
+  "author": {
+    "email": "robert.brightline@gmail.com",
+    "name": "Robert Brightline",
+    "url": "https://beemood.github.io"
+  },
+  "keywords": [
+    "ubee"
+  ],
+  "repository": {
+    "url": "https://github.com/beemood/ubee/tree/main",
+    "type": "github"
+  },
+  "content": "https://raw.githubusercontent.com/beemood/ubee/refs/heads/main",
+  "icon": "https://raw.githubusercontent.com/beemood/ubee/refs/heads/main/favicon.png",
+  "funding": [
+    "https://cash.app/$puqlib"
+  ],
+  "homepage": "https://beemood.github.io/ubee",
   "scripts": {},
-  "private": true,
   "dependencies": {
+    "@nx/devkit": "21.2.0",
     "axios": "^1.6.0"
   },
   "devDependencies": {
@@ -14,6 +32,7 @@
     "@nx/eslint-plugin": "21.2.0",
     "@nx/js": "21.2.0",
     "@nx/node": "21.2.0",
+    "@nx/plugin": "^21.2.0",
     "@nx/rollup": "21.2.0",
     "@nx/vite": "21.2.0",
     "@nx/web": "21.2.0",
@@ -29,6 +48,7 @@
     "eslint": "^9.8.0",
     "eslint-config-prettier": "^10.0.0",
     "jiti": "2.4.2",
+    "jsdom": "~22.1.0",
     "jsonc-eslint-parser": "^2.1.0",
     "nx": "21.2.0",
     "prettier": "^2.6.2",

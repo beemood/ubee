@@ -22,5 +22,16 @@
   "files": [
     "dist",
     "!**/*.tsbuildinfo"
-  ]
+  ],
+  "nx": {
+    "targets": {
+      "doc": {
+        "executor": "nx:run-commands",
+        "options": {
+          "command": "npx typedoc --tsconfig {projectRoot}/tsconfig.lib.json --entryPoints {projectRoot}/src/index.ts --out public/{projectName}",
+          "cwd": "{workspaceRoot}"
+        }
+      }
+    }
+  }
 }

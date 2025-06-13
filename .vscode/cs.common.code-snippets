@@ -1,0 +1,38 @@
+{
+  "type": {
+    "prefix": "type",
+    "body": ["export type $1 = {", "$0", " } "],
+    "scope": "typescript"
+  },
+  "property": {
+    "prefix": "property",
+    "body": [
+      "$1:${2|string,number,boolean,Date,string[],number[],boolean[],Date[],Record<string,string>,T,V|};",
+      "$0"
+    ],
+    "scope": "typescript"
+  },
+  "property string": {
+    "prefix": "property string",
+    "body": ["$1:string;", "$0"],
+    "scope": "typescript"
+  },
+  "property number": {
+    "prefix": "property number",
+    "body": ["$1:number;", "$0"],
+    "scope": "typescript"
+  },
+  "property date": {
+    "prefix": "property Date",
+    "body": ["$1:Date;", "$0"],
+    "scope": "typescript"
+  },
+  "field": {
+    "prefix": "field",
+    "body": [
+      "${1|name:string,description:string,firstName:string,lastName:string,email:Email,createdAt:Date,updatedAt:Date,deletedAt:Date|};",
+      "$0"
+    ],
+    "scope": "typescript"
+  }
+}

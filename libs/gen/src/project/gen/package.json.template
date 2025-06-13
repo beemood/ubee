@@ -1,0 +1,78 @@
+{
+  "name": "<%- projectName %>",
+  "description":"- [ ] add description",
+  "version": "<%- pg.version %>",
+  "license": "<%- pg.license %>",
+  "author": <%- JSON.stringify(pg.author) %>,
+  "keywords":<%- JSON.stringify(pg.keywords) %>,
+  "repository": {
+    "directory": "<%- directory %>",
+    "url": "<%- pg.repository.url %>",
+    "type": "<%- pg.repository.type %>"
+  },
+  "homepage": "<%- pg.homepage %>/<%- fileName %>",
+  "funding": <%- JSON.stringify(pg.funding) %>,
+  "icon": "<%- pg.content %>/<%- directory %>/favicon.png",
+  "publishConfig": {
+    "access": "public",
+    "tag": "latest"
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "development": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "generators.json",
+    "!**/*.tsbuildinfo"
+  ],
+  "nx": {
+    "targets": {
+       "build": {
+        "executor": "@nx/js:tsc",
+        "outputs": [
+          "{options.outputPath}"
+        ],
+        "options": {
+          "outputPath": "libs/gen/dist",
+          "main": "libs/gen/src/index.ts",
+          "tsConfig": "libs/gen/tsconfig.lib.json",
+          "rootDir": "libs/gen/src",
+          "generatePackageJson": false,
+          "assets": [
+            {
+              "input": "./libs/gen/src",
+              "glob": "**/!(*.ts)",
+              "output": "."
+            },
+            {
+              "input": "./libs/gen/src",
+              "glob": "**/*.d.ts",
+              "output": "."
+            }
+          ]
+        }
+      },
+      "doc": {
+        "executor": "nx:run-commands",
+        "options": {
+          "command": "npx typedoc --tsconfig {projectRoot}/tsconfig.lib.json --entryPoints {projectRoot}/src/index.ts --out public/{projectName}",
+          "cwd": "{workspaceRoot}"
+        }
+      }
+    }
+  },
+  "dependencies": {
+    "@nx/devkit": "21.2.0",
+    "tslib": "^2.3.0"
+  },
+  "generators": "./generators.json"
+}
