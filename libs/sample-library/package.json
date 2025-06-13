@@ -1,5 +1,9 @@
 {
   "name": "@ubee/sample-library",
+  "publishConfig": {
+    "access": "public",
+    "tag": "latest"
+  },
   "version": "0.0.1",
   "type": "module",
   "main": "./dist/index.esm.js",
@@ -11,7 +15,8 @@
       "development": "./src/index.ts",
       "types": "./dist/index.d.ts",
       "import": "./dist/index.esm.js",
-      "default": "./dist/index.esm.js"
+      "default": "./dist/index.esm.js",
+      "require": "./dist/index.cjs.js"
     }
   },
   "files": [

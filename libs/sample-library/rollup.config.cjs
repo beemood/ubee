@@ -6,4 +6,6 @@ module.exports = withNx({
   tsConfig: './tsconfig.lib.json',
   compiler: 'swc',
   format: ['esm', 'cjs'],
+  buildLibsFromSource: true,
+  skipTypeCheck: false,
 });
