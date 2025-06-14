@@ -133,7 +133,11 @@ importers:
 
   libs/error: {}
 
-  libs/fs: {}
+  libs/fs:
+    dependencies:
+      '@ubee/error':
+        specifier: ^0.0.1
+        version: 0.0.1
 
   libs/gen:
     dependencies:
@@ -1777,6 +1781,9 @@ packages:
   '@typescript-eslint/visitor-keys@8.34.0':
     resolution: {integrity: sha512-qHV7pW7E85A0x6qyrFn+O+q1k1p3tQCsqIZ1KZ5ESLXY57aTvUd3/a4rdPTeXisvhXn2VQG0VSKUqs8KHF2zcA==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+
+  '@ubee/error@0.0.1':
+    resolution: {integrity: sha512-aHlEIa2DvhxbIKgK8gFHcdI3ZSivspyzvdPyMfjLhFlba0MCe33lG+cdKXARvRMNzNoyr0Z/1u3Wpg2McTQAgw==}
 
   '@ubee/gen@0.0.1':
     resolution: {integrity: sha512-jOTZWdWA5iOCHN7+IUWHX6vNE+2xjXmeql1NEEARrcgl4CR07Gg2qm+zDFsDIS7I4t1ZfbqVoafcduMytZbWdQ==}
@@ -7382,6 +7389,8 @@ snapshots:
     dependencies:
       '@typescript-eslint/types': 8.34.0
       eslint-visitor-keys: 4.2.1
+
+  '@ubee/error@0.0.1': {}
 
   '@ubee/gen@0.0.1(nx@21.2.0(@swc-node/register@1.9.2(@swc/core@1.5.29(@swc/helpers@0.5.17))(@swc/types@0.1.23)(typescript@5.8.3))(@swc/core@1.5.29(@swc/helpers@0.5.17)))':
     dependencies:
