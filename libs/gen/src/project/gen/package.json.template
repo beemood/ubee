@@ -10,7 +10,7 @@
     "url": "<%- pg.repository.url %>",
     "type": "<%- pg.repository.type %>"
   },
-  "homepage": "<%- pg.homepage %>/<%- fileName %>",
+  "homepage": "<%- pg.homepage %>/<%- projectName %>",
   "funding": <%- JSON.stringify(pg.funding) %>,
   "icon": "<%- pg.content %>/<%- directory %>/favicon.png",
   "publishConfig": {

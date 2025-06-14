@@ -33,6 +33,8 @@
     "instagram",
     "facebook",
     "github",
-    "twitter"
+    "twitter",
+    "barcode",
+    "sku"
   ]
 }

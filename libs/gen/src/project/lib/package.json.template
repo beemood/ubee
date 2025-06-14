@@ -10,7 +10,7 @@
     "url": "<%- pg.repository.url %>",
     "type": "<%- pg.repository.type %>"
   },
-  "homepage": "<%- pg.homepage %>/<%- fileName %>",
+  "homepage": "<%- pg.homepage %>/<%- projectName %>",
   "funding": <%- JSON.stringify(pg.funding) %>,
   "icon": "<%- pg.content %>/<%- directory %>/favicon.png",
   "publishConfig": {
@@ -27,8 +27,8 @@
       "development": "./src/index.ts",
       "types": "./dist/index.d.ts",
       "import": "./dist/index.esm.js",
-      "default": "./dist/index.esm.js",
-      "require": "./dist/index.cjs.js"
+      "require": "./dist/index.cjs.js",
+      "default": "./dist/index.esm.js"
     }
   },
   "files": [

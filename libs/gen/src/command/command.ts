@@ -26,6 +26,10 @@ export async function commandGenerator(
     ...names(options.name),
   });
 
+  console.warn(
+    `Required: run "npx nx g @ubee/gen:bind-command ${options.project}" command`
+  );
+
   await formatFiles(tree);
 }
 
