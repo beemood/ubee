@@ -1,4 +1,20 @@
 {
+  "error class": {
+    "prefix": "error class",
+    "body": [
+      "import { BaseError } from '../common/base-error';",
+      "import { ErrorCode } from '../common/error-code';",
+      "",
+      "export class $1Error extends BaseError {",
+      "  constructor(public readonly arg: string) {",
+      "    super(",
+      "      `$0`,",
+      "      ErrorCode.$2",
+      "    );",
+      "  }",
+      "}"
+    ]
+  },
   "type": {
     "prefix": "type",
     "body": ["export type $1 = {", "$0", " } "],

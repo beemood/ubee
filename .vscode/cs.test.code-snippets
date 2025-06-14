@@ -1,4 +1,17 @@
 {
+  "test": {
+    "prefix": "test",
+    "body": [
+      "import { $1 } from './$1.js';",
+      "",
+      "describe('$1', async () => {",
+      "  it('$2', async () => {",
+      "     expect(await $1()).toEqual('0')",
+      "  });",
+      "});"
+    ],
+    "scope": "typescript"
+  },
   "test command": {
     "prefix": "test command",
     "body": [

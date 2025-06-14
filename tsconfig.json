@@ -11,6 +11,12 @@
     },
     {
       "path": "./libs/gen"
-    }
+    },
+    {
+      "path": "./libs/fs"
+    },
+    {
+      "path": "./libs/error"
+    },
   ]
 }

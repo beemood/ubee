@@ -4,6 +4,10 @@
   "main": "./dist/index.js",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
+  "publishConfig": {
+    "access": "public",
+    "tag": "latest"
+  },
   "exports": {
     "./package.json": "./package.json",
     ".": {

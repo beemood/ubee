@@ -10,7 +10,7 @@ import * as path from 'path';
 import { ProjectGeneratorSchema, ProjectType } from './schema';
 
 /**
- * Create the project name in the @<orname>/<projectName> format.
+ * Create the project name in the @<orgname>/<projectName> format.
  * @param workspaceProjectName workspace project name
  * @param currentProjectName the name of the project to be generated.
  * @returns project name
@@ -20,7 +20,7 @@ export function __createProjectName(
   currentProjectName: string
 ) {
   return [
-    workspaceProjectName.split('/').pop(),
+    workspaceProjectName.split('/').shift(),
     names(currentProjectName).fileName,
   ].join('/');
 }

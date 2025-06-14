@@ -1,0 +1,11 @@
+import { ErrorCode } from './error-code';
+
+export class BaseError extends Error {
+  constructor(
+    message: string,
+    public readonly code: ErrorCode,
+    options?: ErrorOptions
+  ) {
+    super(message, options);
+  }
+}

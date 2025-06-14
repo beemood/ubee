@@ -1,0 +1,59 @@
+{
+  "name": "@ubee/fs",
+  "description": "IO library",
+  "version": "0.0.1",
+  "license": "MIT",
+  "author": {
+    "email": "robert.brightline@gmail.com",
+    "name": "Robert Brightline",
+    "url": "https://beemood.github.io"
+  },
+  "keywords": [
+    "ubee",
+    "io",
+    "fs"
+  ],
+  "repository": {
+    "directory": "libs/fs",
+    "url": "https://github.com/beemood/ubee/tree/main",
+    "type": "github"
+  },
+  "homepage": "https://beemood.github.io/ubee/@ubee/fs",
+  "funding": [
+    "https://cash.app/$puqlib"
+  ],
+  "icon": "https://raw.githubusercontent.com/beemood/ubee/refs/heads/main/libs/fs/favicon.png",
+  "publishConfig": {
+    "access": "public",
+    "tag": "latest"
+  },
+  "type": "module",
+  "main": "./dist/index.esm.js",
+  "module": "./dist/index.esm.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "development": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.esm.js",
+      "require": "./dist/index.cjs.js",
+      "default": "./dist/index.esm.js"
+    }
+  },
+  "files": [
+    "dist",
+    "!**/*.tsbuildinfo"
+  ],
+  "nx": {
+    "targets": {
+      "doc": {
+        "executor": "nx:run-commands",
+        "options": {
+          "command": "npx typedoc --tsconfig {projectRoot}/tsconfig.lib.json --entryPoints {projectRoot}/src/index.ts --out public/{projectName}",
+          "cwd": "{workspaceRoot}"
+        }
+      }
+    }
+  }
+}
