@@ -9,7 +9,7 @@
       "node",
       "vitest"
     ],
-    "module": "esnext",
+    "module": "nodenext",
     "moduleResolution": "bundler",
     "forceConsistentCasingInFileNames": true
   },
