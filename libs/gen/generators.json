@@ -19,6 +19,11 @@
       "factory": "./dist/bind-command/bind-command",
       "schema": "./dist/bind-command/schema.json",
       "description": "Bind the generated command with the main program. Run this after generating command"
+    },
+    "content": {
+      "factory": "./dist/content/content",
+      "schema": "./dist/content/schema.json",
+      "description": "content generator"
     }
   }
 }
