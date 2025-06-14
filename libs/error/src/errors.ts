@@ -1,5 +1,5 @@
-import { BaseError } from './base-error';
-import { ErrorCode } from './error-code';
+import { BaseError } from './base-error.js';
+import { ErrorCode } from './error-code.js';
 
 //  General Errors
 export class UnknownError extends BaseError {
