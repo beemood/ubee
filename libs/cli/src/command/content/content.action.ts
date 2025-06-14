@@ -1,7 +1,7 @@
 import { ContentOptions } from './content.options.js';
 
 /**
- * Say content
+ * Read all projects' package.json file and create a single array json under content directory.
  * @param options {@link ContentOptions}
  */
 export function contentAction(options: ContentOptions): void {

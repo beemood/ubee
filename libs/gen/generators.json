@@ -18,7 +18,7 @@
     "bind-command": {
       "factory": "./dist/bind-command/bind-command",
       "schema": "./dist/bind-command/schema.json",
-      "description": "bind-command generator"
+      "description": "Bind the generated command with the main program. Run this after generating command"
     }
   }
 }
