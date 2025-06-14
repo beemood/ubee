@@ -1,0 +1,9 @@
+import { <%- className %>Options } from './<%- fileName %>.options.js';
+
+/**
+ * Say <%- fileName %>
+ * @param options {@link <%- className %>Options}
+ */
+export function <%- propertyName %>Action(options: <%- className %>Options): void {
+  console.log(options.template.replaceAll('$name', options.name));
+}

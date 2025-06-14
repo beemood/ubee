@@ -9,6 +9,16 @@
       "factory": "./dist/project/project",
       "schema": "./dist/project/schema.json",
       "description": "project generator"
+    },
+    "command": {
+      "factory": "./dist/command/command",
+      "schema": "./dist/command/schema.json",
+      "description": "command generator"
+    },
+    "bind-command": {
+      "factory": "./dist/bind-command/bind-command",
+      "schema": "./dist/bind-command/schema.json",
+      "description": "bind-command generator"
     }
   }
 }

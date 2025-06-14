@@ -1,0 +1,6 @@
+export type <%- className %>TemplateString = `${string}$name${string}`;
+
+export type <%- className %>Options = {
+  name: string;
+  template: <%- className %>TemplateString;
+};

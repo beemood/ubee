@@ -1,5 +1,5 @@
 import { program } from 'commander/esm.mjs';
-import { helloCommand } from './hello/hello.command';
+import { bindProgram } from './bind.program';
 
 /**
  * Boot cli program
@@ -10,7 +10,7 @@ export function bootProgram() {
     .description('Ubee command line interface')
     .version('0.0.1');
 
-  helloCommand(program);
+  bindProgram(program);
 
   program.parse();
 }

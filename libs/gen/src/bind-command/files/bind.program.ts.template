@@ -1,0 +1,6 @@
+import { Command } from 'commander';
+<%- imports %>
+
+export function bindProgram(command: Command) {
+  <%- binders %>
+}

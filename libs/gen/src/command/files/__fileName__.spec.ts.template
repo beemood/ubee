@@ -1,0 +1,9 @@
+import { <%- propertyName %>Action } from './<%- fileName %>.action.js';
+
+describe('<%- propertyName %>', () => {
+  it('should run with the provided parameters', () => {
+    const consoleLog = vi.spyOn(console, 'log');
+    <%- propertyName %>Action({ name: 'Some', template: 'How you doing, $name' });
+    expect(consoleLog).toHaveBeenCalledExactlyOnceWith('How you doing, Some');
+  });
+});
