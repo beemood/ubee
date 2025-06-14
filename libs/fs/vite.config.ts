@@ -4,6 +4,7 @@ export default defineConfig(() => ({
   root: __dirname,
   cacheDir: '../../node_modules/.vite/libs/fs',
   plugins: [],
+  
   test: {
     watch: false,
     globals: true,
