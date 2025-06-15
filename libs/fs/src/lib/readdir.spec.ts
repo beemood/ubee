@@ -23,18 +23,18 @@ describe('readdir', async () => {
   it('should read all directories under the provided directory', async () => {
     expect(await readdir(rootdir, { recursive: true })).toEqual([
       {
-        filepath: resolve(rootdir, 'dir1'),
+        filePath: resolve(rootdir, 'dir1'),
         isDirectory: true,
         isFile: false,
         subs: [
           {
-            filepath: resolve(rootdir, 'dir1', 'dir1'),
+            filePath: resolve(rootdir, 'dir1', 'dir1'),
             isDirectory: true,
             isFile: false,
             subs: [],
           },
           {
-            filepath: resolve(rootdir, 'dir1', 'dir2'),
+            filePath: resolve(rootdir, 'dir1', 'dir2'),
             isDirectory: true,
             isFile: false,
             subs: [],
@@ -42,7 +42,7 @@ describe('readdir', async () => {
         ],
       },
       {
-        filepath: resolve(rootdir, 'dir2'),
+        filePath: resolve(rootdir, 'dir2'),
         isDirectory: true,
         isFile: false,
         subs: [],

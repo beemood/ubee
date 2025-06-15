@@ -6,7 +6,8 @@ export type ReaddirOptions = {
 };
 
 export type FileStat = {
-  filepath: string;
+  filePath: string;
+  fileName: string;
   isDirectory: boolean;
   isFile: boolean;
   subs?: ReaddirResponse;
@@ -28,27 +29,29 @@ export async function readdir(
 
   const foundFilenames = await __readdir(rootdir, { encoding: 'utf-8' });
 
-  const absoluteFilePaths = foundFilenames.map((filepath: string) => {
-    return resolve(rootdir, filepath);
+  const absoluteFilePaths = foundFilenames.map((fileName: string) => {
+    return { filePath: resolve(rootdir, fileName), fileName };
   });
 
-  for (const filepath of absoluteFilePaths) {
-    const s = await stat(filepath);
+  for (const { filePath, fileName } of absoluteFilePaths) {
+    const s = await stat(filePath);
     const isFile = s.isFile();
     const isDirectory = s.isDirectory();
 
     if (options?.recursive !== true) {
       response.push({
-        filepath,
+        fileName,
+        filePath,
         isDirectory,
         isFile,
       });
       continue;
     }
 
-    const subs = isDirectory ? await readdir(filepath, options) : undefined;
+    const subs = isDirectory ? await readdir(filePath, options) : undefined;
     response.push({
-      filepath,
+      filePath,
+      fileName,
       isDirectory,
       isFile,
       subs,
