@@ -1,4 +1,4 @@
-import { ErrorCode } from './error-code.js';
+import type { ErrorCode } from './error-code.js';
 
 export class BaseError extends Error {
   constructor(

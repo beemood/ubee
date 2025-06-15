@@ -1,5 +1,6 @@
 import { createReadStream } from 'fs';
-import { createInterface, Interface } from 'readline';
+import type { Interface } from 'readline';
+import { createInterface } from 'readline';
 
 /**
  * Red file line by line

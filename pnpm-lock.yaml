@@ -1779,7 +1779,7 @@ packages:
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
   '@ubee/error@0.0.1':
-    resolution: {integrity: sha512-6exAKc9LBCfkMWSXWJYwhw2s2stUZP9FS3c7E0X5u25UbJNdMdXW15UEQ7pAcPstaWZGummVSEdcaEg2295A3Q==}
+    resolution: {integrity: sha512-yXN8q9Uy117c3KZ5w3s77JItAKsPalDvPmipu1vEKQL6qVDgrDgbu6Z0FjXbYdBtdnDkDw/InCRdJW8D7qQktA==}
 
   '@ubee/gen@0.0.1':
     resolution: {integrity: sha512-jOTZWdWA5iOCHN7+IUWHX6vNE+2xjXmeql1NEEARrcgl4CR07Gg2qm+zDFsDIS7I4t1ZfbqVoafcduMytZbWdQ==}

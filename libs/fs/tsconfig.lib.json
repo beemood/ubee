@@ -8,8 +8,8 @@
     "emitDeclarationOnly": true,
     "module": "esnext",
     "moduleResolution": "bundler",
-    "forceConsistentCasingInFileNames": true,
-    "types": ["node"]
+    "types": ["node"],
+    "forceConsistentCasingInFileNames": true
   },
   "include": ["src/**/*.ts"],
   "references": [],

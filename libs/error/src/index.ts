@@ -1,5 +1,5 @@
 // @index(['./**/*.ts'], f => `export * from '${f.path}.js'`)
-export * from './base-error.js';
-export * from './error-code.js';
-export * from './errors.js';
+export * from './lib/base-error.js';
+export * from './lib/error-code.js';
+export * from './lib/errors.js';
 

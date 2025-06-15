@@ -7,7 +7,7 @@ export enum ErrorCode {
   PERMISSION_DENIED = 1004,
   ACCESS_DENIED = 1005,
   UNAUTHORIZED_ACCESS = 1006, // Often for authentication
-  FORBIDDEN_ACCESS = 1007,     // Often for authorization
+  FORBIDDEN_ACCESS = 1007, // Often for authorization
   SERVICE_UNAVAILABLE = 1008,
   TOO_MANY_REQUESTS = 1009,
   NOT_IMPLEMENTED = 1010,

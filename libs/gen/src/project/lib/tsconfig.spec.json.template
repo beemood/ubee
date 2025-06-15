@@ -9,9 +9,9 @@
       "node",
       "vitest"
     ],
+    "forceConsistentCasingInFileNames": true,
     "module": "esnext",
-    "moduleResolution": "bundler",
-    "forceConsistentCasingInFileNames": true
+    "moduleResolution": "bundler"
   },
   "include": [
     "vite.config.ts",
