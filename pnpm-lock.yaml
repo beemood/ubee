@@ -134,6 +134,13 @@ importers:
       '@ubee/error':
         specifier: ^0.0.1
         version: 0.0.1
+      js-yaml:
+        specifier: ^4.1.0
+        version: 4.1.0
+    devDependencies:
+      '@types/js-yaml':
+        specifier: ^4.0.9
+        version: 4.0.9
 
   libs/gen:
     dependencies:
@@ -1692,6 +1699,9 @@ packages:
   '@types/istanbul-reports@3.0.4':
     resolution: {integrity: sha512-pk2B1NWalF9toCRu6gjBzR69syFjP4Od8WRAX+0mmf9lAjCRicLOWc+ZrxZHx/0XRjotgkF9t6iaMJ+aXcOdZQ==}
 
+  '@types/js-yaml@4.0.9':
+    resolution: {integrity: sha512-k4MGaQl5TGo/iipqb2UDG2UwjXziSWkh0uysQelTlJpX1qGlpUZYm8PnO4DxG1qBomtJUdYJ6qR6xdIah10JLg==}
+
   '@types/json-schema@7.0.15':
     resolution: {integrity: sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==}
 
@@ -1779,7 +1789,7 @@ packages:
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
   '@ubee/error@0.0.1':
-    resolution: {integrity: sha512-yXN8q9Uy117c3KZ5w3s77JItAKsPalDvPmipu1vEKQL6qVDgrDgbu6Z0FjXbYdBtdnDkDw/InCRdJW8D7qQktA==}
+    resolution: {integrity: sha512-xBYvBPvYCDYc3fX45CEDTfw94hYVe6z75xW4k+I5acmN2u1R3nF4ftfMC73Lbrs4qlDMj6F8Lxma8a2BbZIQdw==}
 
   '@ubee/gen@0.0.1':
     resolution: {integrity: sha512-jOTZWdWA5iOCHN7+IUWHX6vNE+2xjXmeql1NEEARrcgl4CR07Gg2qm+zDFsDIS7I4t1ZfbqVoafcduMytZbWdQ==}
@@ -7273,6 +7283,8 @@ snapshots:
   '@types/istanbul-reports@3.0.4':
     dependencies:
       '@types/istanbul-lib-report': 3.0.3
+
+  '@types/js-yaml@4.0.9': {}
 
   '@types/json-schema@7.0.15': {}
 

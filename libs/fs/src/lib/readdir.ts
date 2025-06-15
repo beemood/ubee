@@ -5,12 +5,14 @@ export type ReaddirOptions = {
   recursive?: boolean;
 };
 
-export type ReaddirResponse = {
+export type FileStat = {
   filepath: string;
   isDirectory: boolean;
   isFile: boolean;
   subs?: ReaddirResponse;
-}[];
+};
+
+export type ReaddirResponse = FileStat[];
 
 /**
  * Find all directories and files under the {@link rootdir} directory and map it with {@link ReaddirResponse} type.
