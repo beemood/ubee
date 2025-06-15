@@ -44,7 +44,7 @@ export async function readdir(
       continue;
     }
 
-    const subs = isDirectory ? await readdir(filepath) : undefined;
+    const subs = isDirectory ? await readdir(filepath, options) : undefined;
     response.push({
       filepath,
       isDirectory,
